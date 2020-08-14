@@ -14,6 +14,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Project Name</th>
+                                <th>Total Task</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -22,6 +23,7 @@
                                 <tr>
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $project->name }}</td>
+                                    <td>{{ App\Task::whereProject_id($project->id)->count() }}</td>
                                     <td>
                                         <a class="text-muted ml-2" title="Edit Project" href="{{ route('project.edit', ['id' => encrypt($project->id)]) }}" ><i class="fa fa-edit" style="font-size:20px"></i></a>
                                         <a class="ml-2 text-muted delete_project" title="Delete Project" href="" id="{{encrypt($project->id)}}"> <i class="fa fa-trash-o" style="font-size:20px"></i></a>
