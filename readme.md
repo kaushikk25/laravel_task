@@ -20,5 +20,5 @@
 
 ## About Project
 
-Task Management in project in laravel for  testing purpose
+Task Management project in laravel for testing purpose
 
